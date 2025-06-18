@@ -5,44 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hero Video Landing Page</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
-    /* Custom Nav Transparency Blend */
-    .nav-blur {
-      backdrop-filter: blur(0px);
-      background: rgba(20, 20, 20, 0.10);
-      transition: background 0.3s, backdrop-filter 0.3s;
-    }
-    .nav-blur:hover,
-    .nav-blur:focus-within {
-      backdrop-filter: blur(8px);
-      background: rgba(20, 20, 20, 0.4);
-    }
-    /* Hide scrollbars on video for a clean look */
-    .hide-scroll::-webkit-scrollbar { display: none; }
-    .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    html { font-family: 'Montserrat', Arial, sans-serif; }
+    .nav-logo { letter-spacing: 0.25em; }
+    .bg-blur { background: rgba(0,0,0,0.45); }
   </style>
 </head>
 <body class="relative min-h-screen w-full overflow-x-hidden text-white bg-black">
 
-  <!-- NAVIGATION -->
-<nav class="fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur shadow flex items-center justify-between px-8 py-4 border-b border-gray-200">
-  <div class="flex-1 flex items-center justify-center">
-    <span class="text-2xl font-black tracking-widest border px-4 py-1">SV MOTORCRAFT</span>
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-30 bg-white bg-opacity-95 shadow border-b border-gray-200 flex items-center justify-between px-10 py-4">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <span class="nav-logo text-xl font-black tracking-widest border border-gray-400 px-4 py-1 text-black bg-white">BLACKBRIDGE</span>
   </div>
-  <ul class="hidden md:flex gap-10 text-base font-medium text-gray-800">
-    <li class="hover:text-orange-600 cursor-pointer transition">PARTS & ACCESSORIES</li>
-    <li class="hover:text-orange-600 cursor-pointer transition">CHASSIS & UPGRADES</li>
-    <li class="hover:text-orange-600 cursor-pointer transition">PROJECT RESCUE</li>
-    <li class="hover:text-orange-600 cursor-pointer transition">ABOUT US</li>
-    <li class="hover:text-orange-600 cursor-pointer transition">CONTACT US</li>
+  <!-- Center Menu -->
+  <ul class="hidden lg:flex gap-10 text-sm font-semibold text-gray-800 tracking-widest uppercase">
+    <li class="hover:underline underline-offset-8 decoration-2 cursor-pointer">Parts & Accessories</li>
+    <li class="hover:underline underline-offset-8 decoration-2 cursor-pointer">Chassis & Upgrades</li>
+    <li class="hover:underline underline-offset-8 decoration-2 cursor-pointer">Project Rescue</li>
+    <li class="hover:underline underline-offset-8 decoration-2 cursor-pointer">About Us</li>
+    <li class="hover:underline underline-offset-8 decoration-2 cursor-pointer">Contact Us</li>
   </ul>
-  <div class="hidden md:flex gap-6 ml-8 text-xl text-gray-700 items-center">
+  <!-- Right Icons -->
+  <div class="hidden lg:flex gap-6 ml-8 text-xl text-gray-700 items-center">
     <span class="material-icons">person</span>
     <span class="material-icons">shopping_cart</span>
     <span class="material-icons">search</span>
   </div>
-  <!-- Mobile Menu Icon -->
-  <button class="md:hidden ml-4 block">
+  <!-- Mobile Menu -->
+  <button class="lg:hidden ml-4 block">
     <svg width="32" height="32" fill="none" class="text-gray-700">
       <rect x="6" y="10" width="20" height="2" rx="1" fill="currentColor"/>
       <rect x="6" y="16" width="20" height="2" rx="1" fill="currentColor"/>
@@ -53,25 +47,30 @@
 
 <!-- HERO SECTION --> 
 <main class="relative flex flex-col justify-center items-center min-h-screen w-full">
-  <!-- 4K Video BG -->
+  <!-- Video BG -->
   <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover z-0" autoplay loop muted playsinline>
     <source src="/assets/video/example.mp4" type="video/mp4" />
   </video>
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/70 z-10"></div>
+  <!-- Overlay (darken video) -->
+  <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
   <!-- Hero Content -->
-  <section class="relative z-20 flex flex-col items-center justify-center w-full px-4 min-h-[65vh]">
-    <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center drop-shadow-xl tracking-tight">
-        Reliable auto parts, expert repairs, and honest service to keep you safely on the road. Drive in today and experience quality you can trust.
+  <section class="relative z-20 flex flex-col items-center justify-center w-full px-4 min-h-[65vh] pt-40 pb-16">
+    <h1 class="text-4xl md:text-6xl font-extrabold uppercase tracking-wide mb-6 text-center drop-shadow-xl">
+      Project Rescue by Blackbridge Motors
     </h1>
-    <a href="#shop" class="px-10 py-4 rounded bg-orange-600 hover:bg-orange-700 text-white text-lg font-bold tracking-wide shadow-lg transition-all">
-      SHOP ALL PARTS
-    </a>
+    <p class="text-lg md:text-2xl font-medium mb-8 text-center text-gray-200 max-w-2xl drop-shadow">
+      Stalled Land Rover Defender Restoration Project? Let us help.
+    </p>
+    <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto justify-center">
+      <a href="#" class="px-8 py-4 rounded bg-orange-200 hover:bg-orange-300 text-gray-800 text-lg font-bold tracking-wide shadow-lg transition-all text-center">
+        Start Your Rescue
+      </a>
+      <a href="#" class="px-8 py-4 rounded bg-gray-800 hover:bg-gray-700 text-white text-lg font-bold tracking-wide shadow-lg border border-white transition-all text-center">
+        Schedule a Call
+      </a>
+    </div>
   </section>
 </main>
-
-<!-- OPTIONAL: Material Icons CDN (if you want the icons to appear) -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </body>
 </html>
