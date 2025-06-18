@@ -25,23 +25,31 @@
 <body class="relative min-h-screen w-full overflow-x-hidden text-white bg-black">
 
   <!-- NAVIGATION -->
-  <nav class="nav-blur fixed top-0 left-0 w-full z-30 flex items-center justify-between px-8 py-5 transition-all duration-300">
-    <div class="text-xl font-bold tracking-widest drop-shadow-lg">LOGO</div>
-    <ul class="flex gap-8 text-lg font-medium">
-      <li class="hover:underline hover:text-blue-400 transition">Home</li>
-      <li class="hover:underline hover:text-blue-400 transition">Features</li>
-      <li class="hover:underline hover:text-blue-400 transition">Pricing</li>
-      <li class="hover:underline hover:text-blue-400 transition">Contact</li>
-    </ul>
-    <!-- Mobile Menu Icon (optional) -->
-    <button class="lg:hidden ml-4 block">
-      <svg width="32" height="32" fill="none" class="text-white">
-        <rect x="6" y="10" width="20" height="2" rx="1" fill="currentColor"/>
-        <rect x="6" y="16" width="20" height="2" rx="1" fill="currentColor"/>
-        <rect x="6" y="22" width="20" height="2" rx="1" fill="currentColor"/>
-      </svg>
-    </button>
-  </nav>
+<nav class="fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur shadow flex items-center justify-between px-8 py-4 border-b border-gray-200">
+  <div class="flex-1 flex items-center justify-center">
+    <span class="text-2xl font-black tracking-widest border px-4 py-1">BLACKBRIDGE</span>
+  </div>
+  <ul class="hidden md:flex gap-10 text-base font-medium text-gray-800">
+    <li class="hover:text-orange-600 cursor-pointer transition">PARTS & ACCESSORIES</li>
+    <li class="hover:text-orange-600 cursor-pointer transition">CHASSIS & UPGRADES</li>
+    <li class="hover:text-orange-600 cursor-pointer transition">PROJECT RESCUE</li>
+    <li class="hover:text-orange-600 cursor-pointer transition">ABOUT US</li>
+    <li class="hover:text-orange-600 cursor-pointer transition">CONTACT US</li>
+  </ul>
+  <div class="hidden md:flex gap-6 ml-8 text-xl text-gray-700 items-center">
+    <span class="material-icons">person</span>
+    <span class="material-icons">shopping_cart</span>
+    <span class="material-icons">search</span>
+  </div>
+  <!-- Mobile Menu Icon -->
+  <button class="md:hidden ml-4 block">
+    <svg width="32" height="32" fill="none" class="text-gray-700">
+      <rect x="6" y="10" width="20" height="2" rx="1" fill="currentColor"/>
+      <rect x="6" y="16" width="20" height="2" rx="1" fill="currentColor"/>
+      <rect x="6" y="22" width="20" height="2" rx="1" fill="currentColor"/>
+    </svg>
+  </button>
+</nav>
 
 <!-- HERO SECTION --> 
 <main class="relative flex flex-col justify-center items-center min-h-screen w-full">
@@ -51,27 +59,20 @@
     Your browser does not support the video tag.
   </video>
   <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-10"></div>
+  <div class="absolute inset-0 bg-black/70 z-10"></div>
   <!-- Hero Content -->
-  <section class="relative z-20 flex flex-col items-center justify-center w-full px-4">
-  <h1 class="text-5xl md:text-7xl font-extrabold mb-8 text-center drop-shadow-2xl">
-    Your Local Car Parts & Service Experts
-  </h1>
-  <p class="text-xl md:text-2xl max-w-xl mb-10 text-center drop-shadow-lg">
-  Reliable auto parts, expert repairs, and honest service to keep you safely on the road. Drive in today and experience quality you can trust.
-  </p>
-    <a href="#cta" class="inline-block px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white text-xl font-semibold transition-all shadow-xl ring-2 ring-blue-400/40 focus:ring-4 focus:outline-none">
-      Shop Now
+  <section class="relative z-20 flex flex-col items-center justify-center w-full px-4 min-h-[65vh]">
+    <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white text-center drop-shadow-xl tracking-tight">
+      Innovation Through Engineering
+    </h1>
+    <a href="#shop" class="px-10 py-4 rounded bg-orange-600 hover:bg-orange-700 text-white text-lg font-bold tracking-wide shadow-lg transition-all">
+      SHOP ALL PARTS
     </a>
   </section>
 </main>
 
-  <!-- Fallback padding for nav -->
-  <div class="pt-28"></div>
+<!-- OPTIONAL: Material Icons CDN (if you want the icons to appear) -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Optional: Simple script for mobile nav (can be expanded) -->
-  <script>
-    // Add nav open/close functionality for mobile if you add mobile menu later
-  </script>
 </body>
 </html>
