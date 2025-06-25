@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SV Motorcraft | Project Rescue</title>
+  <title>SV Motorcraft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -11,50 +11,83 @@
   </style>
 </head>
 <body class="bg-black text-white">
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full z-30 bg-white/90 border-b border-gray-200 shadow">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-      <span class="text-xl font-black tracking-widest border px-4 py-1 text-black bg-white uppercase">SV Motorcraft</span>
-      <ul class="hidden md:flex gap-10 text-sm font-semibold text-gray-800 tracking-widest uppercase">
-        <li class="hover:underline">Parts & Accessories</li>
-        <li class="hover:underline">Chassis & Upgrades</li>
-        <li class="hover:underline">Project Rescue</li>
-        <li class="hover:underline">About Us</li>
-        <li class="hover:underline">Contact Us</li>
-      </ul>
-      <div class="hidden md:flex gap-4 ml-8 text-xl text-gray-700 items-center">
-        <span class="material-icons">person</span>
-        <span class="material-icons">shopping_cart</span>
-        <span class="material-icons">search</span>
+ <!-- index.html -->
+<nav class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-2xl sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Brand/Logo -->
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <!-- SVG Gear/Car Accent -->
+        <span class="inline-block w-9 h-9 bg-blue-700 rounded-full flex items-center justify-center shadow-md">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7zm6.364-1.864l1.414 1.414-2.121 2.121-1.414-1.414M7.05 7.05l-1.414-1.414 2.121-2.121L8.657 4.93m6.364 6.364l2.121 2.121-1.414 1.414-2.121-2.121m-6.364-6.364l-2.121 2.121 1.414 1.414 2.121-2.121M12 3v2M12 19v2M21 12h-2M5 12H3"></path>
+          </svg>
+        </span>
+        <span class="text-2xl font-extrabold tracking-wider text-blue-400 drop-shadow-sm">SV Motorcraft</span>
+      </div>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#parts" class="nav-link">Parts</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#book" class="ml-6 px-5 py-2 rounded-2xl font-semibold bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400">Book Service</a>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" aria-label="Open menu" class="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <svg class="h-8 w-8 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
-  <!-- HERO -->
-  <main class="relative flex flex-col justify-center items-center min-h-screen w-full">
-    <!-- Video BG -->
-    <video class="absolute inset-0 w-full h-full object-cover z-0" autoplay loop muted playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-    </video>
-    <div class="absolute inset-0 bg-black/70 z-10"></div>
-    <section class="relative z-20 flex flex-col items-center justify-center w-full min-h-[65vh] pt-40 pb-16">
-      <div class="max-w-3xl mx-auto flex flex-col items-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold uppercase tracking-wide mb-6 text-center drop-shadow-xl">
-          Project Rescue by SV Motorcraft
-        </h1>
-        <p class="text-lg md:text-2xl font-medium mb-8 text-center text-gray-200 max-w-2xl drop-shadow">
-          Stalled Land Rover Defender Restoration Project? Let us help.
-        </p>
-        <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto justify-center">
-          <a href="#" class="px-8 py-4 rounded bg-orange-200 hover:bg-orange-300 text-gray-800 text-lg font-bold tracking-wide shadow-lg transition-all text-center">
-            Start Your Rescue
-          </a>
-          <a href="#" class="px-8 py-4 rounded bg-gray-800 hover:bg-gray-700 text-white text-lg font-bold tracking-wide shadow-lg border border-white transition-all text-center">
-            Schedule a Call
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </div>
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black/70 z-40 flex flex-col items-end transition-all duration-200 opacity-0 pointer-events-none">
+    <div class="w-2/3 bg-gray-900 p-8 min-h-full flex flex-col gap-8">
+      <button id="close-menu" class="mb-6 self-end text-gray-400 hover:text-blue-400 focus:outline-none">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="#parts" class="nav-link-mobile">Parts</a>
+      <a href="#services" class="nav-link-mobile">Services</a>
+      <a href="#about" class="nav-link-mobile">About</a>
+      <a href="#contact" class="nav-link-mobile">Contact</a>
+      <a href="#book" class="mt-8 px-5 py-3 rounded-2xl font-semibold bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all text-center">Book Service</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    @apply text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300;
+  }
+  .nav-link-mobile {
+    @apply text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none;
+  }
+</style>
+<script>
+  // Mobile menu JS
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-menu');
+  menuBtn.onclick = () => {
+    menu.style.opacity = '1';
+    menu.style.pointerEvents = 'auto';
+  };
+  closeBtn.onclick = () => {
+    menu.style.opacity = '0';
+    menu.style.pointerEvents = 'none';
+  };
+  // Close menu on link click (for mobile)
+  document.querySelectorAll('.nav-link-mobile').forEach(link =>
+    link.addEventListener('click', () => {
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+    })
+  );
+</script>
 </body>
 </html>
