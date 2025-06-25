@@ -11,7 +11,9 @@
   </style>
 </head>
 <body class="bg-black text-white">
- <!-- index.html -->
+
+  <!-- Navigation -->
+<!-- index.html -->
 <nav class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-2xl sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
@@ -27,10 +29,10 @@
       </div>
       <!-- Desktop Nav -->
       <div class="hidden md:flex gap-8 items-center">
-        <a href="#parts" class="nav-link">Parts</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#parts" class="text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300">Parts</a>
+        <a href="#services" class="text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300">Services</a>
+        <a href="#about" class="text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300">About</a>
+        <a href="#contact" class="text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300">Contact</a>
         <a href="#book" class="ml-6 px-5 py-2 rounded-2xl font-semibold bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400">Book Service</a>
       </div>
       <!-- Mobile menu button -->
@@ -51,23 +53,14 @@
           <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
-      <a href="#parts" class="nav-link-mobile">Parts</a>
-      <a href="#services" class="nav-link-mobile">Services</a>
-      <a href="#about" class="nav-link-mobile">About</a>
-      <a href="#contact" class="nav-link-mobile">Contact</a>
+      <a href="#parts" class="text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none">Parts</a>
+      <a href="#services" class="text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none">Services</a>
+      <a href="#about" class="text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none">About</a>
+      <a href="#contact" class="text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none">Contact</a>
       <a href="#book" class="mt-8 px-5 py-3 rounded-2xl font-semibold bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all text-center">Book Service</a>
     </div>
   </div>
 </nav>
-
-<style>
-  .nav-link {
-    @apply text-lg text-gray-200 font-medium hover:text-blue-400 hover:underline transition-all duration-150 focus:outline-none focus:text-blue-300;
-  }
-  .nav-link-mobile {
-    @apply text-2xl text-gray-100 font-bold py-2 px-2 rounded hover:bg-gray-800 hover:text-blue-400 transition-all duration-150 focus:outline-none;
-  }
-</style>
 <script>
   // Mobile menu JS
   const menuBtn = document.getElementById('mobile-menu-btn');
@@ -82,7 +75,7 @@
     menu.style.pointerEvents = 'none';
   };
   // Close menu on link click (for mobile)
-  document.querySelectorAll('.nav-link-mobile').forEach(link =>
+  document.querySelectorAll('#mobile-menu a').forEach(link =>
     link.addEventListener('click', () => {
       menu.style.opacity = '0';
       menu.style.pointerEvents = 'none';
